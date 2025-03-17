@@ -1,19 +1,12 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
+import { Background } from "./Background";
 
 export function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center relative">
-      <div 
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: 'url(https://images.unsplash.com/photo-1454165804606-c3d57bc86b40)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          opacity: 0.1
-        }}
-      />
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+      <Background />
       <div className="container relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -21,19 +14,29 @@ export function Hero() {
           transition={{ duration: 0.5 }}
           className="text-center"
         >
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Hi, I'm Navneeth KM
-          </h1>
+          <motion.div
+            className="inline-block mb-6"
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60">
+              Hi, I'm Navneeth KM
+            </h1>
+          </motion.div>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8">
             Frontend Developer & IT Student
           </p>
           <div className="flex gap-4 justify-center">
-            <Button asChild>
-              <a href="#contact">Hire Me</a>
-            </Button>
-            <Button variant="outline" asChild>
-              <a href="/resume.pdf" download>Download CV</a>
-            </Button>
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Button asChild size="lg" className="text-lg">
+                <a href="#contact">Hire Me</a>
+              </Button>
+            </motion.div>
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Button variant="outline" asChild size="lg" className="text-lg">
+                <a href="/resume.pdf" download>Download CV</a>
+              </Button>
+            </motion.div>
           </div>
         </motion.div>
       </div>
