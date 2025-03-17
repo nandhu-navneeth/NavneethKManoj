@@ -7,8 +7,10 @@
     <script>
       // Get the current path
       const path = window.location.pathname;
+      // Remove /NavneethKManoj/ from the path if it exists
+      const cleanPath = path.replace("/NavneethKManoj/", "");
       // Redirect to the main app with the current path
-      window.location.href = "/NavneethKManoj/" + path;
+      window.location.href = "/NavneethKManoj/" + cleanPath;
     </script>
   </head>
   <body>
