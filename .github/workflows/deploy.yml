@@ -29,6 +29,7 @@ jobs:
         run: npm run build
         env:
           NODE_ENV: production
+          VITE_BASE_URL: /NavneethKManoj/
 
       - name: Setup Pages
         uses: actions/configure-pages@v3

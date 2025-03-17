@@ -54,7 +54,7 @@ app.use((req, res, next) => {
   if (app.get("env") === "development") {
     await setupVite(app, server);
   } else {
-    app.use("/NavneethKManoj", express.static("dist"));
+    app.use("/NavneethKManoj", express.static(path.join(__dirname, "../dist")));
     app.get("/NavneethKManoj/*", (req, res) => {
       res.sendFile(path.join(__dirname, "../dist/index.html"));
     });
