@@ -78,40 +78,31 @@ This project is open source and available under the [MIT License](LICENSE).
 ### Prerequisites
 
 1. A GitHub account
-2. A Replit account (for hosting)
 
 ### Deployment Steps
 
-1. **Fork the Repository**
+1. **Enable GitHub Pages**
 
-   - Go to the repository URL
-   - Click the "Fork" button in the top right corner
-   - This will create a copy of the repository in your GitHub account
-
-2. **Set up Replit**
-
-   - Create a new Repl
-   - Choose "Import from GitHub"
-   - Select your forked repository
-   - Once imported, get your Repl ID and Token:
-     - Go to your Repl's "Secrets" tab
-     - Copy the `REPL_ID` and `REPL_TOKEN`
-
-3. **Configure GitHub Secrets**
-
-   - Go to your forked repository on GitHub
+   - Go to your repository on GitHub
    - Click on "Settings"
-   - Go to "Secrets and variables" → "Actions"
-   - Add two new secrets:
-     - Name: `REPL_ID`
-     - Value: Your Repl ID
-     - Name: `REPL_TOKEN`
-     - Value: Your Repl Token
+   - Scroll down to "GitHub Pages" section
+   - Under "Source", select "GitHub Actions"
+   - Click "Save"
 
-4. **Deploy**
-   - Push your changes to the main branch
-   - GitHub Actions will automatically build and deploy your site
-   - Your site will be available at your Repl's URL
+2. **Push your code**
+
+   ```bash
+   git add .
+   git commit -m "Configure GitHub Pages deployment"
+   git push origin main
+   ```
+
+3. **Check deployment status**
+   - Go to your repository on GitHub
+   - Click on "Actions" tab
+   - You should see your workflow running
+   - Once completed, your site will be available at:
+     `https://nandhu-navneeth.github.io/NavneethKManoj`
 
 ## Local Development
 
