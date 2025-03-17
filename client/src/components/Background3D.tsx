@@ -20,12 +20,21 @@ function Stars(props: any) {
 
   useFrame((state, delta) => {
     if (ref.current) {
-      ref.current.rotation.x -= delta / 15;
-      ref.current.rotation.y -= delta / 20;
+      try {
+        console.log("Current ref state:", {
+          rotation: ref.current.rotation,
+          position: ref.current.position
+        });
 
-      // Add mouse-based movement
-      ref.current.rotation.x += mousePosition.y * delta / 10;
-      ref.current.rotation.y += mousePosition.x * delta / 10;
+        ref.current.rotation.x -= delta / 15;
+        ref.current.rotation.y -= delta / 20;
+
+        // Add mouse-based movement
+        ref.current.rotation.x += mousePosition.y * delta / 10;
+        ref.current.rotation.y += mousePosition.x * delta / 10;
+      } catch (error) {
+        console.error("Error in animation frame:", error);
+      }
     }
   });
 
@@ -73,7 +82,13 @@ export function Background3D() {
           <Canvas 
             camera={{ position: [0, 0, 1] }}
             style={{ background: 'transparent' }}
-            onError={() => console.error("Canvas error occurred")}
+            onCreated={({ gl }) => {
+              console.log("Canvas created successfully");
+              gl.setClearColor(new THREE.Color(0x000000), 0);
+            }}
+            onError={(error) => {
+              console.error("Canvas error occurred:", error);
+            }}
           >
             <CanvasContent />
           </Canvas>
