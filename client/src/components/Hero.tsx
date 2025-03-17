@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
-import { Background3D } from "./Background3D";
+import { Background } from "./Background";
 
 export function Hero() {
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      <Background3D />
+      <Background />
       <div className="container relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
