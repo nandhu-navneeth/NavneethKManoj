@@ -44,16 +44,19 @@ A modern, interactive portfolio website showcasing my skills, projects, and achi
 ## 🔧 Setup & Development
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/nandhu-navneeth/NavneethKManoj.git
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 ```
 
 3. Start the development server:
+
 ```bash
 npm run dev
 ```
@@ -69,3 +72,74 @@ npm run dev
 ## 📝 License
 
 This project is open source and available under the [MIT License](LICENSE).
+
+## Deployment Instructions
+
+### Prerequisites
+
+1. A GitHub account
+2. A Replit account (for hosting)
+
+### Deployment Steps
+
+1. **Fork the Repository**
+
+   - Go to the repository URL
+   - Click the "Fork" button in the top right corner
+   - This will create a copy of the repository in your GitHub account
+
+2. **Set up Replit**
+
+   - Create a new Repl
+   - Choose "Import from GitHub"
+   - Select your forked repository
+   - Once imported, get your Repl ID and Token:
+     - Go to your Repl's "Secrets" tab
+     - Copy the `REPL_ID` and `REPL_TOKEN`
+
+3. **Configure GitHub Secrets**
+
+   - Go to your forked repository on GitHub
+   - Click on "Settings"
+   - Go to "Secrets and variables" → "Actions"
+   - Add two new secrets:
+     - Name: `REPL_ID`
+     - Value: Your Repl ID
+     - Name: `REPL_TOKEN`
+     - Value: Your Repl Token
+
+4. **Deploy**
+   - Push your changes to the main branch
+   - GitHub Actions will automatically build and deploy your site
+   - Your site will be available at your Repl's URL
+
+## Local Development
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/yourusername/NavneethKManoj.git
+   cd NavneethKManoj
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+4. Open http://localhost:3000 in your browser
+
+## Technologies Used
+
+- Express.js
+- React
+- Tailwind CSS
+- TypeScript
+- Vite
