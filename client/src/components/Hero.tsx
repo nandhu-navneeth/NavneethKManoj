@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
-import { Background } from "./Background";
+import { Background3D } from "./Background3D";
 
 export function Hero() {
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      <Background />
+      <Background3D />
       <div className="container relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -20,11 +20,11 @@ export function Hero() {
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
             <h1 className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60">
-              Hi, I'm Navneeth KM
+              Hi, I'm Navneeth K Manoj
             </h1>
           </motion.div>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8">
-            Frontend Developer & IT Student
+            AI/ML Enthusiast & Full Stack Developer
           </p>
           <div className="flex gap-4 justify-center">
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>

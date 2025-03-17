@@ -2,13 +2,13 @@ import { motion } from "framer-motion";
 import { Progress } from "@/components/ui/progress";
 
 const skills = [
+  { name: "Machine Learning", level: 75 },
+  { name: "Python", level: 85 },
+  { name: "TensorFlow/PyTorch", level: 70 },
+  { name: "Data Analysis", level: 80 },
+  { name: "JavaScript/React", level: 85 },
   { name: "HTML/CSS", level: 90 },
-  { name: "JavaScript", level: 85 },
-  { name: "React", level: 80 },
-  { name: "Python", level: 75 },
-  { name: "Java", level: 70 },
   { name: "C/C++", level: 85 },
-  { name: "SQL", level: 75 },
   { name: "Git", level: 80 },
 ];
 

@@ -23,10 +23,10 @@ export function Navbar() {
             whileTap={{ scale: 0.95 }}
           >
             <div className="relative w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-primary-foreground">
-              NK
+              NKM
             </div>
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60">
-              Navneeth KM
+              Navneeth K Manoj
             </span>
           </motion.a>
         </Link>
