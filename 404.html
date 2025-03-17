@@ -7,10 +7,8 @@
     <script>
       // Get the current path
       const path = window.location.pathname;
-      // Only redirect if we're at the root
-      if (path === "/") {
-        window.location.href = "/NavneethKManoj/";
-      }
+      // Redirect to the main app with the current path
+      window.location.href = "/NavneethKManoj/" + path;
     </script>
   </head>
   <body>
